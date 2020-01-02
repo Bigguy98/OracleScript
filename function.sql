@@ -2,7 +2,7 @@
 CREATE OR REPLACE FUNCTION TOTAL_BOOKS RETURN NUMBER AS
 	total number(2) := 0; 
 BEGIN
-  SELECT count(*) into total from books;   
+  SELECT count(*) into total from book;   
   RETURN total;
 END TOTAL_BOOKS;
 

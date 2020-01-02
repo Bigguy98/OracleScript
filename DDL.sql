@@ -22,7 +22,7 @@ CREATE TABLE reader (
 	email varchar(50),
 	address varchar(50),
 	CONSTRAINT reader_pk PRIMARY KEY (reader_id)
-)
+);
 CREATE TABLE issueNote (
 	note_id varchar(20),
 	reader_id CONSTRAINT id_for_reader REFERENCES reader(reader_id),
@@ -30,4 +30,4 @@ CREATE TABLE issueNote (
 	issueDate DATE CONSTRAINT issueDate_not_null NOT NULL,
 	returnDate DATE CONSTRAINT returnDate_not_null NOT NULL,
 	CONSTRAINT issueNote_pk PRIMARY KEY (note_id)
-)
+);
