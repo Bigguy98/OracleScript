@@ -22,7 +22,7 @@ CREATE OR REPLACE PACKAGE BODY GET_INFO AS
     return titleOut;
   END get_book_title;
     -----------------------------------------------------------
-  function get_book_author(bookId number) return book.author%TYPE AS
+  function get_book_author(bookId varchar) return book.author%TYPE AS
     titleOut book.title%TYPE;
     authorOut book.author%TYPE;
   BEGIN
